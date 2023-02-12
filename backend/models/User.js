@@ -60,9 +60,6 @@ const UserSchema = new mongoose.Schema(
     institute: {
       type: String,
     },
-    skillset: {
-      type: [String],
-    },
     bio: {
       type: String,
     },
@@ -90,18 +87,6 @@ const UserSchema = new mongoose.Schema(
                 type: String,
             }
         },
-    ],
-    network_follower: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-      },
-    ],
-    network_following: [
-      {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "User",
-      },
     ],
     collaboration_sent: [
       {

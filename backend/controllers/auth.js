@@ -42,8 +42,9 @@ export const register = async (req, res) => {
 export const whoami = async (req, res) => {
   try {
     const cookie = req.headers.cookie;
-    //console.log(cookie);
-    res.set("Access-Control-Allow-Origin", "*");
+    console.log(req.headers);
+    res.set("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.set("Access-Control-Allow-Credentials", "true");
     //res.setHeader("Access-Control-Allow-Credentials", true);
     if (!cookie) {
       return res.status(401).json({
@@ -91,9 +92,9 @@ export const whoami = async (req, res) => {
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
-    res.set("Access-Control-Allow-Origin", "*");
+    res.set("Access-Control-Allow-Origin", "http://localhost:3000");
+    res.set("Access-Control-Allow-Credentials", "true");
     //res.setHeader("Access-Control-Allow-Credentials", true);
-
     const user = await User.findOne({ email }).select("+password");
 
     if (!user) {
@@ -118,19 +119,21 @@ export const login = async (req, res) => {
     //console.log(payload, "payload");
 
     const token = await jwt.sign(payload, process.env.JWT_SECRET, {
-      expiresIn: "10d",
+      expiresIn: "5d",
     });
-
+    //console.log(token);
     res.setHeader(
       "Set-Cookie",
       cookie.serialize("inventum", token, {
         httpOnly: true,
         secure: process.env.NODE_ENV !== "development",
         sameSite: "lax",
-        maxAge: 10 * 24 * 60 * 60,
+        maxAge: 3 * 24 * 60 * 60,
         path: "/",
       })
     );
+
+    //res.setHeader('Set-Cookie', `inventum=${token}; Max-Age=864000; HttpOnly; SameSite=Lax; Path=/`);
 
     res.json({
       success: true,
