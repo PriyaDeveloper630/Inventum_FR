@@ -8,8 +8,8 @@ const data = [
 const inventions = () => {
   return (
     <div className='OuterInvention'>
-      <h2 className='heading'>Your Inventions</h2>
-      <h4 className='heading'>Check Inventions</h4>
+      <h2 className='heading' id="heading2">Your Inventions</h2>
+      <h4 className='heading'id="heading4">Check Inventions</h4>
       <div className="inventionContainer">
           
           <table>
