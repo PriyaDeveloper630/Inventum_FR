@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import SignIn from "./pages/Signin";
 import SignUp from "./pages/Signup";
 import Profile from "./pages/Profile";
+import Network from "./pages/Network";
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/profile" element={<Profile/>} />
+        <Route path="/network" element={<Network/>} />
       </Routes>
     </div>
   );
