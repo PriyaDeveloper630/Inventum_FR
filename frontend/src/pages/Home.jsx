@@ -1,7 +1,22 @@
-import React from 'react'
+import React from "react";
+import './Home.css';
+import Navbar from "../components/Navbar";
+import Dashboard from "../components/Dashboard";
+import ViewPost from "../components/ViewPost";
+import TrendingNews from "../components/TrendingNews";
 
-export default function Home() {
+
+
+function Home () {
   return (
-    <div>Home</div>
-  )
-}
+    <div className="homePage">
+      <Navbar></Navbar>
+      <Dashboard></Dashboard>
+      <ViewPost></ViewPost>
+      <TrendingNews></TrendingNews>
+      
+    </div>
+  );
+};
+
+export default Home;
