@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+.landingPage{
+    position: relative;
+    min-width: 100%;
+    background-image:url('./bgcb.png');
+    height: 100vh;
+}
+.landing_nav-items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        width: 410px;
+        height: 50px;
+        left: 1000px;
+        top: 20px;
+        background: #FCFCFC;
+        border-radius: 25px 0px 0px 25px;
+     }
+
+     
+.landingtext{
+    position: absolute;
+    width: 550px;
+    height: 100px;
+    left: 100px;
+    top: 150px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 50px;
+text-align: left;
+
+/* Text */
+
+color: #24014E;
+}
+.smalltext{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 30px;
+    text-align: left;
+    
+}
+.landinglogin{
+    color:#24014E;
+    margin-top:15px;
+    font-size:1.4rem;
+}
+
+.landingButtons{
+   display:flex;
+   flex-direction: row;
+   margin-top:30px;
+   gap: 40px; 
+   position: absolute;
+   width: 350px;
+   height: 50px;
+   left: 145px;
+   top:400px;
+}
+
+.landingAdmin{
+    font-weight: bold;
+    justify-content:space-between;
+    font-size: 1.0rem;
+    color:white;
+    width:150px;
+    border-radius:20px;
+    background-color: rgb(36,1,78);
+}
+.landingStudent{
+    font-weight: bold;
+    justify-content:space-between;
+    font-size: 1.0rem;
+    color:white;
+    width:150px;
+    border-radius:20px;
+    background-color: rgb(36,1,78);
+}
+.microscope{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: 800px;
+    top: 100px;
+} 
+.testtube{
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 60px;
+    margin-right:0px;
+}
+.landinglogo{
+    position: absolute;
+    width: 200px;
+    margin-left:20px;
+    margin-right:0px;
+    margin-top: 20px;
+    height:60px;
+   
+}
+.landingtab{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 15px 50px;
+    gap: 10px;
+    position: absolute;
+    width: 410px;
+    height: 50px;
+    left: 1000px;
+    top: 20px;
+
+    background: #FCFCFC;
+    border-radius: 25px 0px 0px 25px;
+  }
+  .landingnav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:2rem;
+    padding: 0 1rem;
+  }
+  .landingnav ul{
+    padding-left:96px;
+    margin-top:1px;
+    margin-right: 5px;
+    list-style:none;
+    display:flex;
+    gap :5rem;
+
+}
+.landingnav a{
+  color:#24014E;
+  text-decoration: none;
+
+}
+.landingnav li{
+  margin-top: 1px;
+  font-weight: bold;
+}
+.landingnav li{
+  margin-top: 1px;
+  font-weight: bold;
+}
+.landingnav li:hover{
+  text-decoration:underline;
+}
